@@ -1,14 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/light_primary"
+    android:orientation="vertical"
     tools:context=".HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <ImageView
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:src="@drawable/main_cat"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dp"
+        android:contentDescription="@string/main_cat" />
 
-</FrameLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/toksocat"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/red_primary"
+        android:layout_marginTop="20dp"
+        android:textSize="36sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/toksocat_desc"
+        android:fontFamily="@font/poppins_medium"
+        android:paddingHorizontal="45dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/red_primary"
+        android:layout_marginTop="20dp"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/btnBeginTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="66dp"
+        android:paddingHorizontal="54dp"
+        android:paddingVertical="10dp"
+        android:background="@drawable/bg_button"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/begin_test"
+        android:textColor="@color/light_primary"
+        android:textSize="24sp"
+        android:maxLines="1"
+        android:fontFamily="@font/poppins_bold"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btnAboutUs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="66dp"
+        android:paddingHorizontal="54dp"
+        android:paddingVertical="10dp"
+        android:background="@drawable/bg_button"
+        android:backgroundTint="@color/light_secondary"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/about_us"
+        android:maxLines="1"
+        android:textColor="@color/red_primary"
+        android:textSize="24sp"
+        android:fontFamily="@font/poppins_bold"
+        android:textAllCaps="false" />
+
+</LinearLayout>

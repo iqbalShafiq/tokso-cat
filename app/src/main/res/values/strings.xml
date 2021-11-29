@@ -2,4 +2,11 @@
     <string name="app_name">ToksoCat</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="main_cat">main cat</string>
+    <string name="toksocat">ToksoCat</string>
+    <string name="toksocat_desc">An expert system that can help you to detect whether your cat has toxoplasmy</string>
+    <string name="begin_test">Begin Test</string>
+    <string name="about_us">About Us</string>
+    <string name="back">Back</string>
+    <string name="choose_1_answer">Choose 1 answer</string>
 </resources>

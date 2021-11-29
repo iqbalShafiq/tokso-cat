@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuestionerFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        android:fillViewport="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvBrand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:layout_marginEnd="55dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/toksocat"
+                android:textColor="@color/red_primary"
+                android:textSize="36sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ivMainCat"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ivMainCat" />
+
+            <ImageView
+                android:id="@+id/ivMainCat"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginEnd="45dp"
+                android:contentDescription="@string/main_cat"
+                android:src="@drawable/main_cat"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvQuestionPage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/red_primary"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="@+id/tvBrand"
+                app:layout_constraintTop_toBottomOf="@+id/ivMainCat"
+                tools:text="Question 1" />
+
+            <TextView
+                android:id="@+id/tvQuestion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="45dp"
+                android:layout_marginTop="35dp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/red_primary"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvQuestionPage"
+                tools:text="What do you think about the liveliness of your cat?" />
+
+            <TextView
+                android:id="@+id/tvChooseAnswer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="45dp"
+                android:layout_marginTop="35dp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/red_primary"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvQuestion"
+                android:text="@string/choose_1_answer" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAnswer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tvChooseAnswer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:clipToPadding="false"
+                tools:itemCount="4"
+                tools:listitem="@layout/item_answer" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="66dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/bg_button"
+            android:fontFamily="@font/poppins_bold"
+            android:maxLines="1"
+            android:paddingHorizontal="54dp"
+            android:paddingVertical="10dp"
+            android:text="Next"
+            android:textAllCaps="false"
+            android:textColor="@color/light_primary"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="66dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/bg_button"
+            android:backgroundTint="@color/light_secondary"
+            android:fontFamily="@font/poppins_bold"
+            android:maxLines="1"
+            android:paddingHorizontal="54dp"
+            android:paddingVertical="10dp"
+            android:text="@string/back"
+            android:textAllCaps="false"
+            android:textColor="@color/red_primary"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
