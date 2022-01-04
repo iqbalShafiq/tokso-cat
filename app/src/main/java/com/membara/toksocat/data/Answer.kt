@@ -1,4 +1,4 @@
-package com.membara.toksocat
+package com.membara.toksocat.data
 
 class Answer(
     private var _text: String,

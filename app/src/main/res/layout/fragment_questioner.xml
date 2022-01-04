@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".QuestionerFragment">
+    android:background="@color/light_primary"
+    tools:context=".view.fragments.QuestionerFragment">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="0dp"
@@ -35,12 +36,12 @@
 
             <ImageView
                 android:id="@+id/ivMainCat"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:layout_marginTop="45dp"
                 android:layout_marginEnd="45dp"
                 android:contentDescription="@string/main_cat"
-                android:src="@drawable/main_cat"
+                android:src="@drawable/ic_tclogo"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -103,45 +104,52 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:background="@color/light_primary"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingHorizontal="40dp"
+        android:paddingTop="40dp"
+        android:paddingBottom="30dp"
+        android:weightSum="2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
-            android:id="@+id/btnNext"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginHorizontal="66dp"
-            android:layout_marginTop="40dp"
-            android:background="@drawable/bg_button"
-            android:fontFamily="@font/poppins_bold"
-            android:maxLines="1"
-            android:paddingHorizontal="54dp"
-            android:paddingVertical="10dp"
-            android:text="Next"
-            android:textAllCaps="false"
-            android:textColor="@color/light_primary"
-            android:textSize="24sp" />
-
-        <Button
             android:id="@+id/btnBack"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="5dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginHorizontal="66dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="40dp"
             android:background="@drawable/bg_button"
-            android:backgroundTint="@color/light_secondary"
+            android:layout_marginEnd="12dp"
             android:fontFamily="@font/poppins_bold"
             android:maxLines="1"
-            android:paddingHorizontal="54dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
             android:paddingVertical="10dp"
+            android:backgroundTint="@color/light_secondary"
             android:text="@string/back"
             android:textAllCaps="false"
             android:textColor="@color/red_primary"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="12dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/bg_button"
+            android:fontFamily="@font/poppins_bold"
+            android:maxLines="1"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="10dp"
+            android:paddingVertical="10dp"
+            android:layout_weight="1"
+            android:text="Next"
+            android:textAllCaps="false"
+            android:textColor="@color/light_primary"
             android:textSize="24sp" />
 
     </LinearLayout>

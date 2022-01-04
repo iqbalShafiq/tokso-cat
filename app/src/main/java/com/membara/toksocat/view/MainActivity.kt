@@ -1,7 +1,7 @@
-package com.membara.toksocat
+package com.membara.toksocat.view
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.membara.toksocat.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

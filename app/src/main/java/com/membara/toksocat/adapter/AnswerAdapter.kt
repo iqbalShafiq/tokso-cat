@@ -1,22 +1,25 @@
-package com.membara.toksocat
+package com.membara.toksocat.adapter
 
 import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Color
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.membara.toksocat.data.Answer
 import com.membara.toksocat.databinding.ItemAnswerBinding
+import com.membara.toksocat.view.fragments.QuestionerFragment
 
 class AnswerAdapter(
     private val context: Context,
-    private val answers: MutableList<Answer>
+    private val answers: MutableList<Answer>,
+    private val fragment: QuestionerFragment
 )
     : RecyclerView.Adapter<AnswerAdapter.ViewHolder>() {
 
     private lateinit var binding: ItemAnswerBinding
+    var focusedPosition = RecyclerView.NO_POSITION
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
@@ -33,27 +36,29 @@ class AnswerAdapter(
     @SuppressLint("NotifyDataSetChanged")
     override fun onBindViewHolder(holder: ViewHolder, @SuppressLint("RecyclerView") position: Int) {
         val answer = answers[position]
-        Log.d("AnswerAdapter", "onBindViewHolder: updated")
+        holder.setIsRecyclable(false) // fix notifyDataSetChanged() issue
 
         // set view
         binding.btnAnswer.text = answer.text
-        if (answer.isSelected) {
+        if (focusedPosition == position) {
             binding.btnAnswer.isSelected = true
             binding.btnAnswer.setTextColor(Color.parseColor("#FDEFEF"))
-            Log.d("AnswerAdapter", "onBindViewHolder: $position focused")
         } else {
             binding.btnAnswer.isSelected = false
             binding.btnAnswer.setTextColor(Color.parseColor("#CDBBA7"))
-            Log.d("AnswerAdapter", "onBindViewHolder: $position not focused")
         }
 
         // onclick event
         binding.btnAnswer.setOnClickListener {
-            answer.isSelected = !answer.isSelected
-            binding.btnAnswer.isSelected = true
-            binding.btnAnswer.isEnabled = true
-            binding.btnAnswer.setTextColor(Color.parseColor("#FDEFEF"))
-            Log.d("AnswerAdapter", "onBindViewHolder: $position focused")
+            // set focused position and refresh items state
+            if (focusedPosition != position) {
+                focusedPosition = position
+                fragment.setEnableNextButtonView()
+            } else {
+                focusedPosition = RecyclerView.NO_POSITION
+                fragment.setDisableNextButtonView()
+            }
+            notifyDataSetChanged()
         }
     }
 

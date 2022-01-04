@@ -5,12 +5,12 @@
     android:layout_height="match_parent"
     android:background="@color/light_primary"
     android:orientation="vertical"
-    tools:context=".HomeFragment">
+    tools:context=".view.fragments.HomeFragment">
 
     <ImageView
         android:layout_width="170dp"
         android:layout_height="170dp"
-        android:src="@drawable/main_cat"
+        android:src="@drawable/ic_tclogo"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="60dp"
         android:contentDescription="@string/main_cat" />

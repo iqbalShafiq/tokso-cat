@@ -1,21 +1,21 @@
-package com.membara.toksocat
+package com.membara.toksocat.view.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.membara.toksocat.databinding.FragmentAboutBinding
+import androidx.fragment.app.Fragment
+import com.membara.toksocat.databinding.FragmentResultBinding
 
-class AboutFragment : Fragment() {
+class ResultFragment : Fragment() {
 
-    private lateinit var binding: FragmentAboutBinding
+    private lateinit var binding: FragmentResultBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentAboutBinding.inflate(
+        binding = FragmentResultBinding.inflate(
             inflater,
             container,
             false
