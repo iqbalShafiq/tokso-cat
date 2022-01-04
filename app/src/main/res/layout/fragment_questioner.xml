@@ -20,29 +20,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/tvBrand"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="45dp"
-                android:layout_marginEnd="55dp"
-                android:fontFamily="@font/poppins_bold"
-                android:text="@string/toksocat"
-                android:textColor="@color/red_primary"
-                android:textSize="36sp"
-                app:layout_constraintBottom_toBottomOf="@+id/ivMainCat"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/ivMainCat" />
-
-            <ImageView
-                android:id="@+id/ivMainCat"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="45dp"
-                android:layout_marginEnd="45dp"
-                android:contentDescription="@string/main_cat"
-                android:src="@drawable/ic_tclogo"
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
@@ -53,8 +35,9 @@
                 android:fontFamily="@font/poppins_semibold"
                 android:textColor="@color/red_primary"
                 android:textSize="24sp"
-                app:layout_constraintStart_toStartOf="@+id/tvBrand"
-                app:layout_constraintTop_toBottomOf="@+id/ivMainCat"
+                android:layout_marginStart="45dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar"
                 tools:text="Question 1" />
 
             <TextView
@@ -132,6 +115,7 @@
             android:text="@string/back"
             android:textAllCaps="false"
             android:textColor="@color/red_primary"
+            style="?android:attr/buttonBarButtonStyle"
             android:textSize="24sp" />
 
         <Button
@@ -147,10 +131,11 @@
             android:layout_marginBottom="10dp"
             android:paddingVertical="10dp"
             android:layout_weight="1"
-            android:text="Next"
+            style="?android:attr/buttonBarButtonStyle"
             android:textAllCaps="false"
             android:textColor="@color/light_primary"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            tools:text="Next" />
 
     </LinearLayout>
 

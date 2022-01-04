@@ -9,4 +9,15 @@
     <string name="about_us">About Us</string>
     <string name="back">Back</string>
     <string name="choose_1_answer">Choose 1 answer</string>
+    <string name="made_with_love_by_us">Made with love by us</string>
+    <string name="alvin_image">alvin image</string>
+    <string name="alvin_nur_r">Alvin Nur R</string>
+    <string name="iqbal_shafiq_r">Iqbal Shafiq R</string>
+    <string name="iqbal_image">Iqbal Image</string>
+    <string name="publisher_message">“This application was created to complete the final project of artificial intelligence course”</string>
+    <string name="knowledge">Knowledge</string>
+    <string name="result_status">result status</string>
+    <string name="image_result">image result</string>
+    <string name="result">Result</string>
+    <string name="back_to_home">Back to Home</string>
 </resources>
