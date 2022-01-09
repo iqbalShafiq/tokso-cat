@@ -1,4 +1,4 @@
-package com.membara.toksocat.view.fragments
+package com.membara.toksocat.view.fragments.knowledgebase
 
 import android.os.Bundle
 import android.view.LayoutInflater

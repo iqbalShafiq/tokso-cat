@@ -66,7 +66,7 @@
         app:enterAnim="@anim/nav_default_enter_anim"
         app:exitAnim="@anim/nav_default_exit_anim"
         app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-        app:popExitAnim="@anim/nav_default_pop_exit_anim" >
+        app:popExitAnim="@anim/nav_default_pop_exit_anim">
         <action
             android:id="@+id/navigateBackToHomeFromAbout"
             app:destination="@id/homeFragment"
@@ -74,5 +74,55 @@
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_aboutFragment_to_knowledgeBaseCategoryFragment"
+            app:destination="@id/knowledgeBaseCategoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/knowledgeBaseFragment"
+        android:name="com.membara.toksocat.view.fragments.knowledgebase.KnowledgeBaseFragment"
+        android:label="fragment_knowledge_base"
+        tools:layout="@layout/fragment_knowledge_base">
+        <action
+            android:id="@+id/action_knowledgeBaseFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+        <argument
+            android:name="category"
+            android:defaultValue="Symptoms"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/knowledgeBaseCategoryFragment"
+        android:name="com.membara.toksocat.view.fragments.knowledgebase.KnowledgeBaseCategoryFragment"
+        android:label="fragment_knowledge_base_category"
+        tools:layout="@layout/fragment_knowledge_base_category">
+        <action
+            android:id="@+id/action_knowledgeBaseCategoryFragment_to_knowledgeBaseFragment"
+            app:destination="@id/knowledgeBaseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/destinationCategoryFragment"
+        android:name="com.membara.toksocat.view.fragments.knowledgebase.DestinationCategoryFragment"
+        android:label="DestinationCategoryFragment">
+        <action
+            android:id="@+id/action_destinationCategoryFragment_to_destinationListFragment"
+            app:destination="@id/destinationListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/destinationListFragment"
+        android:name="com.membara.toksocat.view.fragments.knowledgebase.DestinationListFragment"
+        android:label="fragment_destination_list"
+        tools:layout="@layout/fragment_destination_list">
+        <argument
+            android:name="category"
+            android:defaultValue="Symtoms" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.membara.toksocat.view.fragments.knowledgebase.DetailFragment"
+        android:label="DetailFragment">
+        <action
+            android:id="@+id/action_detailFragment_to_destinationCategoryFragment"
+            app:destination="@id/destinationCategoryFragment" />
     </fragment>
 </navigation>

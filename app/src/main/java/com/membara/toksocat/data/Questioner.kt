@@ -1,9 +1,14 @@
 package com.membara.toksocat.data
 
-class Questioner(
-    private var _text: String,
-    private var _answers: MutableList<Answer>
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity
+data class Questioner(
+    var text: String,
+    var yesDestination: Int?,
+    var noDestination: Int?
 ) {
-    var text = this._text
-    var answers = this._answers
+    @PrimaryKey(autoGenerate = true)
+    var uuid: Int = 0
 }

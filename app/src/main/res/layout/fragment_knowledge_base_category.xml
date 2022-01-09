@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.fragments.knowledgebase.KnowledgeBaseCategoryFragment">
+
+    <include layout="@layout/toolbar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="45dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/knowledge_base"
+        android:textColor="@color/red_primary"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/btnSymptom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="45dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/bg_button_light"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="start"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="14dp"
+        android:text="@string/symptoms"
+        android:textAllCaps="false"
+        android:textColor="@color/red_primary"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnDisease"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="45dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/bg_button_light"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="start"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="14dp"
+        android:text="@string/diseases"
+        android:textAllCaps="false"
+        android:textColor="@color/red_primary"
+        android:textSize="18sp" />
+
+</LinearLayout>

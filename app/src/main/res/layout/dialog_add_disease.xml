@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_button_light"
+    android:backgroundTint="@color/light_primary"
+    android:orientation="vertical"
+    android:paddingHorizontal="40dp"
+    android:paddingVertical="35dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center"
+        android:text="@string/add_disease"
+        android:textColor="@color/red_primary"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/etDisease"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/bg_button_light"
+        android:fontFamily="@font/poppins"
+        android:hint="@string/type_here"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="14dp"
+        android:textColor="@color/red_primary"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/bg_button"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="14dp"
+        android:text="@string/save"
+        android:textAllCaps="false"
+        android:textColor="@color/light_primary"
+        android:textSize="18sp" />
+
+</LinearLayout>

@@ -7,24 +7,23 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.membara.toksocat.data.Answer
-import com.membara.toksocat.databinding.ItemAnswerBinding
+import com.membara.toksocat.data.Questioner
+import com.membara.toksocat.databinding.ItemQuestionBinding
 import com.membara.toksocat.view.fragments.QuestionerFragment
 
-class AnswerAdapter(
+class QuestionAdapter(
     private val context: Context,
-    private val answers: MutableList<Answer>,
+    private val questions: MutableList<Questioner>,
     private val fragment: QuestionerFragment
-)
-    : RecyclerView.Adapter<AnswerAdapter.ViewHolder>() {
+) : RecyclerView.Adapter<QuestionAdapter.ViewHolder>() {
 
-    private lateinit var binding: ItemAnswerBinding
+    private lateinit var binding: ItemQuestionBinding
     var focusedPosition = RecyclerView.NO_POSITION
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        binding = ItemAnswerBinding.inflate(
+        binding = ItemQuestionBinding.inflate(
             LayoutInflater.from(context),
             parent,
             false
@@ -35,7 +34,7 @@ class AnswerAdapter(
 
     @SuppressLint("NotifyDataSetChanged")
     override fun onBindViewHolder(holder: ViewHolder, @SuppressLint("RecyclerView") position: Int) {
-        val answer = answers[position]
+        val answer = questions[position]
         holder.setIsRecyclable(false) // fix notifyDataSetChanged() issue
 
         // set view
@@ -53,16 +52,14 @@ class AnswerAdapter(
             // set focused position and refresh items state
             if (focusedPosition != position) {
                 focusedPosition = position
-                fragment.setEnableNextButtonView()
             } else {
                 focusedPosition = RecyclerView.NO_POSITION
-                fragment.setDisableNextButtonView()
             }
             notifyDataSetChanged()
         }
     }
 
     override fun getItemCount(): Int {
-        return answers.size
+        return questions.size
     }
 }

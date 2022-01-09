@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="35dp">
+
+    <Button
+        android:id="@+id/btnDestination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="21dp"
+        android:background="@drawable/bg_button_light"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="start"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="14dp"
+        android:textAllCaps="false"
+        android:textColor="@color/red_primary"
+        android:textSize="18sp"
+        tools:text="What do you think about the liveliness of your cat? " />
+
+</LinearLayout>

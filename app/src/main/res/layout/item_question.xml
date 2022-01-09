@@ -8,12 +8,12 @@
 
     <Button
         android:id="@+id/btnAnswer"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="45dp"
+        android:layout_marginStart="45dp"
         android:fontFamily="@font/poppins_semibold"
         android:gravity="start|center_vertical"
-        android:background="@drawable/btn_answer"
+        android:background="@drawable/bg_radius_left"
         android:paddingStart="30dp"
         android:paddingEnd="60dp"
         android:paddingVertical="14dp"
@@ -21,22 +21,30 @@
         android:textAllCaps="false"
         android:textColor="@color/red_primary"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/llDelete"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:text="A. Very Active" />
+        tools:text="What do you think about the liveliness of your cat? " />
 
-    <View
-        android:id="@+id/view"
-        android:layout_width="22dp"
-        android:layout_height="22dp"
-        android:visibility="visible"
-        android:background="@drawable/ic_checked"
-        app:layout_constraintEnd_toEndOf="@id/btnAnswer"
-        android:layout_marginEnd="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:elevation="2dp"/>
+    <LinearLayout
+        android:id="@+id/llDelete"
+        android:layout_width="62dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="45dp"
+        android:background="@drawable/bg_radius_right"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@id/btnAnswer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btnAnswer">
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="18dp"
+            android:contentDescription="@string/icon_trash"
+            android:src="@drawable/ic_trash" />
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

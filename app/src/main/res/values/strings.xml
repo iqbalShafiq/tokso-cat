@@ -20,4 +20,20 @@
     <string name="image_result">image result</string>
     <string name="result">Result</string>
     <string name="back_to_home">Back to Home</string>
+    <string name="next">Next</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="questions">Questions</string>
+    <string name="knowledge_base">Knowledge Base</string>
+    <string name="icon_trash">icon trash</string>
+    <string name="add">Add</string>
+    <string name="alternative_answers">Alternative Answers</string>
+    <string name="choose_one_destination">Choose one destination</string>
+    <string name="apply">Apply</string>
+    <string name="save">Save</string>
+    <string name="symptoms">Symptoms</string>
+    <string name="diseases">Diseases</string>
+    <string name="choose_one_category">Choose One category</string>
+    <string name="add_disease">Add Disease</string>
+    <string name="type_here">Type here ...</string>
 </resources>

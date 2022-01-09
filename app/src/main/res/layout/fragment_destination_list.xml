@@ -1,41 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/light_primary"
     android:orientation="vertical"
-    tools:context=".view.fragments.knowledgebase.KnowledgeBaseFragment">
+    tools:context=".view.fragments.knowledgebase.DestinationListFragment">
 
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar" />
 
     <TextView
-        android:id="@+id/tvKnowledgeBase"
+        android:id="@+id/tvAlternativeAnswers"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="45dp"
         android:layout_marginTop="35dp"
         android:fontFamily="@font/poppins_semibold"
-        android:text="@string/knowledge_base"
+        android:text="@string/alternative_answers"
         android:textColor="@color/red_primary"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbar" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvQuestions"
+    <TextView
+        android:id="@+id/tvAnswer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
+        android:layout_marginHorizontal="45dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/yes"
+        android:textColor="@color/red_primary"
+        android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvKnowledgeBase"
+        app:layout_constraintTop_toBottomOf="@id/tvAlternativeAnswers" />
+
+    <TextView
+        android:id="@+id/tvChooseDestination"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="45dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/choose_one_destination"
+        android:textColor="@color/red_primary"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAnswer" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvDestinations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvChooseDestination"
         tools:itemCount="3"
-        tools:listitem="@layout/item_question" />
+        tools:listitem="@layout/item_destination" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -86,7 +114,7 @@
             android:fontFamily="@font/poppins_bold"
             android:maxLines="1"
             android:paddingVertical="10dp"
-            android:text="@string/add"
+            android:text="@string/apply"
             android:textAllCaps="false"
             android:textColor="@color/light_primary"
             android:textSize="24sp" />
