@@ -7,13 +7,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.membara.toksocat.data.Questioner
+import com.membara.toksocat.data.Symptom
 import com.membara.toksocat.databinding.ItemQuestionBinding
 import com.membara.toksocat.view.fragments.QuestionerFragment
 
 class QuestionAdapter(
     private val context: Context,
-    private val questions: MutableList<Questioner>,
+    private val questions: MutableList<Symptom>,
     private val fragment: QuestionerFragment
 ) : RecyclerView.Adapter<QuestionAdapter.ViewHolder>() {
 
