@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import com.membara.toksocat.databinding.FragmentKnowledgeBaseCategoryBinding
 
 class KnowledgeBaseCategoryFragment : Fragment() {
@@ -14,7 +15,7 @@ class KnowledgeBaseCategoryFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         binding = FragmentKnowledgeBaseCategoryBinding.inflate(layoutInflater, container, false)
         return binding.root
@@ -22,5 +23,19 @@ class KnowledgeBaseCategoryFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        with(binding) {
+            btnSymptom.setOnClickListener {
+                val action = KnowledgeBaseCategoryFragmentDirections
+                    .navigateToKnowledgeBaseFragment("symptoms")
+                Navigation.findNavController(this.root).navigate(action)
+            }
+
+            btnDisease.setOnClickListener {
+                val action = KnowledgeBaseCategoryFragmentDirections
+                    .navigateToKnowledgeBaseFragment("diseases")
+                Navigation.findNavController(this.root).navigate(action)
+            }
+        }
     }
 }

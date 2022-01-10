@@ -49,6 +49,7 @@
                     android:layout_marginStart="23dp"
                     android:fontFamily="@font/poppins_medium"
                     android:text="@string/alvin_nur_r"
+                    android:textSize="18sp"
                     android:textColor="@color/red_primary" />
 
             </LinearLayout>
@@ -73,6 +74,7 @@
                     android:layout_marginStart="23dp"
                     android:fontFamily="@font/poppins_medium"
                     android:text="@string/iqbal_shafiq_r"
+                    android:textSize="18sp"
                     android:textColor="@color/green_primary" />
 
             </LinearLayout>

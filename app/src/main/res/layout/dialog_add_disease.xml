@@ -25,6 +25,7 @@
         android:background="@drawable/bg_button_light"
         android:fontFamily="@font/poppins"
         android:hint="@string/type_here"
+        android:textColorHint="@color/red_primary"
         android:importantForAutofill="no"
         android:inputType="text"
         android:paddingHorizontal="24dp"

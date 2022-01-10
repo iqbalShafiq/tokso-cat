@@ -33,14 +33,14 @@
                 android:layout_marginStart="45dp"
                 android:layout_marginTop="35dp"
                 android:fontFamily="@font/poppins_semibold"
-                android:text="@string/questions"
+                android:text="@string/knowledge_base"
                 android:textColor="@color/red_primary"
                 android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
-            <TextView
-                android:id="@+id/tvQuestion"
+            <EditText
+                android:id="@+id/etSymptom"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="45dp"
@@ -48,9 +48,12 @@
                 android:fontFamily="@font/poppins_medium"
                 android:textColor="@color/red_primary"
                 android:textSize="22sp"
+                android:backgroundTint="@color/green_primary"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvQuestionPage"
+                android:importantForAutofill="no"
+                tools:ignore="LabelFor"
                 tools:text="What do you think about the liveliness of your cat?" />
 
             <TextView
@@ -65,7 +68,7 @@
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvQuestion" />
+                app:layout_constraintTop_toBottomOf="@+id/etSymptom" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -94,6 +97,7 @@
                         android:paddingStart="30dp"
                         android:paddingEnd="60dp"
                         android:text="@string/yes"
+                        style="?android:attr/borderlessButtonStyle"
                         android:textAllCaps="false"
                         android:textColor="@color/red_primary"
                         android:textSize="18sp"
@@ -143,6 +147,7 @@
                         android:paddingStart="30dp"
                         android:paddingEnd="60dp"
                         android:text="@string/no"
+                        style="?android:attr/borderlessButtonStyle"
                         android:textAllCaps="false"
                         android:textColor="@color/red_primary"
                         android:textSize="18sp"

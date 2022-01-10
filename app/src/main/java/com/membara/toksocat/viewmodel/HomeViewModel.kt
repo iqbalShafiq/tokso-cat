@@ -1,6 +1,8 @@
 package com.membara.toksocat.viewmodel
 
 import android.app.Application
+import androidx.lifecycle.MutableLiveData
+import com.membara.toksocat.data.Symptom
 import com.membara.toksocat.db.KnowledgeBaseDatabase
 import com.membara.toksocat.util.InitiateDataUtil
 import io.reactivex.disposables.CompositeDisposable
@@ -11,6 +13,9 @@ import kotlinx.coroutines.launch
 class HomeViewModel(application: Application) : BaseViewModel(application) {
     private val disposable = CompositeDisposable()
 
+    // live data
+    val symptoms = MutableLiveData<List<Symptom>>()
+
     // check db first
     fun checkDB() {
         launch {
@@ -19,6 +24,7 @@ class HomeViewModel(application: Application) : BaseViewModel(application) {
             // check the db
             val results = dao.getSymptoms()
             if (results.isEmpty()) addDummyDataToDB()
+            else symptoms.value = results
         }
     }
 
@@ -42,6 +48,9 @@ class HomeViewModel(application: Application) : BaseViewModel(application) {
                     dao.insertDisease(disease)
                 }
             }.awaitAll()
+
+            // assign to live data
+            symptoms.value = dummySymptoms
         }
     }
 
